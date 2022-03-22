@@ -1,0 +1,10 @@
+<h2>Cart list:</h2>
+<div *ngIf="cardList; else emptyCart">
+  <p *ngFor="let item of cardList; trackBy: trackByItems">
+    ({{item.id}}) {{item.name}}
+  </p>
+</div>
+
+<ng-template #emptyCart>
+  <p>Empty card</p>
+</ng-template>

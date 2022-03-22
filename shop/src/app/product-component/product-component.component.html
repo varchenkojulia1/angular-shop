@@ -1,0 +1,4 @@
+<p *ngFor=" let product of list">
+  Name: {{product.name}} Description: {{product.description}} Price: {{product.price}} UAH
+  <button (click)="onAddToCart()">Buy</button>
+</p>
