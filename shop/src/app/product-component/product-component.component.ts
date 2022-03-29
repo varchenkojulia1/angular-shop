@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import { ProductModel } from "@shop/utils";
 
 @Component({
@@ -9,7 +9,9 @@ import { ProductModel } from "@shop/utils";
 export class ProductComponentComponent {
   @Input() public list: ProductModel[] = [];
 
-  onAddToCart(): void {
-    console.log('item is addet to cart')
+  @Output() public addToCart: EventEmitter<ProductModel> = new EventEmitter<ProductModel>();
+
+  onAddToCart(product: ProductModel): void {
+    this.addToCart.emit(product);
   }
 }

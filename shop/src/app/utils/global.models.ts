@@ -8,3 +8,7 @@ export interface ProductModel{
   category: CATEGORY;
   isAvailable: boolean;
 }
+
+export interface CardItemModel extends  ProductModel{
+  quantity: number;
+}

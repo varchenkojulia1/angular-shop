@@ -1,7 +1,18 @@
 <h2>Cart list:</h2>
-<div *ngIf="cardList; else emptyCart">
-  <p *ngFor="let item of cardList; trackBy: trackByItems">
-    ({{item.id}}) {{item.name}}
+<div *ngIf="cardList.length > 0; else emptyCart">
+  <div *ngFor="let item of cardList; trackBy: trackByItems">
+    <app-cart-item
+      [item]="item"
+      (onQuantityIncrease)="increaseQuantity($event)"
+      (onDeleteItem)="deleteItem($event)"
+      (onQuantityDecrease)="decreaseQuantity($event)"
+    ></app-cart-item>
+  </div>
+  <p>
+    Total Cost: {{totalCost}}
+  </p>
+  <p>
+    Total Quantity: {{totalQuantity}}
   </p>
 </div>
 

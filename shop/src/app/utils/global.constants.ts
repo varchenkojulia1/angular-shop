@@ -1,4 +1,4 @@
-import { ProductModel } from "./global.models";
+import {CardItemModel, ProductModel} from "./global.models";
 
 
 export enum CATEGORY {
@@ -20,7 +20,7 @@ export const productList: ProductModel[] = [
     description: 'television',
     price: 3000,
     category: CATEGORY.TV,
-    isAvailable: true
+    isAvailable: false
   },
   {
     id: 101,
@@ -32,13 +32,14 @@ export const productList: ProductModel[] = [
   }
 ]
 
-export const cartList: ProductModel[] = [
+export const cartList: CardItemModel[] = [
   {
     id: 123,
     name: 'Iphone 6',
     description: 'phone',
     price: 1000,
     category: CATEGORY.PHONE,
-    isAvailable: true
+    isAvailable: true,
+    quantity: 1
   }
 ]
