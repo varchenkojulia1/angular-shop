@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import { CartService } from "../core/cart.service";
+import { CartService } from "./../../core/cart.service";
 import {CardItemModel, ProductModel} from "@shop/utils";
 
 @Component({
@@ -25,6 +25,7 @@ export class CartListComponent implements OnInit {
   trackByItems(index: number, item: ProductModel): number { return item.id; }
 
   increaseQuantity($event: CardItemModel): void {
+    // такого рода функционал надо выносить в сервис
     this.cardList = this.cardList?.map((item: CardItemModel) => {
       if (item.id === $event.id) {
         item.quantity++
@@ -38,6 +39,7 @@ export class CartListComponent implements OnInit {
   }
 
   decreaseQuantity($event: CardItemModel): void {
+    // такого рода функционал надо выносить в сервис
     this.cardList = this.cardList?.map((item: CardItemModel) => {
       if (item.id === $event.id && item.quantity > 0) {
         item.quantity--
@@ -51,6 +53,7 @@ export class CartListComponent implements OnInit {
   }
 
   deleteItem($event: CardItemModel): void {
+    // такого рода функционал надо выносить в сервис
     this.cardList = this.cardList?.filter((item: CardItemModel) => {
 
       return item.id !== $event.id

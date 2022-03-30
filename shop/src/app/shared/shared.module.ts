@@ -1,6 +1,6 @@
 import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
-import {HighlightDirective} from "./highlight.directive";
+import {HighlightDirective} from "./directives/highlight.directive";
 
 @NgModule({
   declarations: [HighlightDirective],
