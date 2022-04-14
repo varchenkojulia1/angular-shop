@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import {CartModule} from "./cart-list/cart.module";
-import {OrdersModule} from "./orders.module";
-import {ProductsModule} from "./product-list/products.module";
-import {SharedModule} from "./shared.module";
+import {CartModule} from "./cart/cart.module";
+import {OrdersModule} from "./orders/orders.module";
+import {ProductsModule} from "./products/products.module";
+import {SharedModule} from "./shared/shared.module";
 
 @NgModule({
   declarations: [

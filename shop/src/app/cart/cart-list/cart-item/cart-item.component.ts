@@ -7,11 +7,11 @@ import {CardItemModel} from "@shop/utils";
   styleUrls: ['./cart-item.component.scss']
 })
 export class CartItemComponent {
-  @Input() public item!: CardItemModel;
+  @Input() item!: CardItemModel;
 
-  @Output() public onQuantityIncrease: EventEmitter<CardItemModel> = new EventEmitter<CardItemModel>();
-  @Output() public onQuantityDecrease: EventEmitter<CardItemModel> = new EventEmitter<CardItemModel>();
-  @Output() public onDeleteItem: EventEmitter<CardItemModel> = new EventEmitter<CardItemModel>();
+  @Output() onQuantityIncrease: EventEmitter<CardItemModel> = new EventEmitter<CardItemModel>();
+  @Output() onQuantityDecrease: EventEmitter<CardItemModel> = new EventEmitter<CardItemModel>();
+  @Output() onDeleteItem: EventEmitter<CardItemModel> = new EventEmitter<CardItemModel>();
 
   increaseQuantity(): void {
     this.onQuantityIncrease.emit(this.item);

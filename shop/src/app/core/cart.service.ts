@@ -6,7 +6,7 @@ import { CardItemModel, cartList } from "@shop/utils";
 })
 export class CartService {
   getCart(): CardItemModel[] {
-    return cartList
+    return cartList;
   }
 
   getTotalCost(list: CardItemModel[] = this.getCart()): number {
