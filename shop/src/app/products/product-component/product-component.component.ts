@@ -7,7 +7,7 @@ import { ProductModel } from "@shop/utils";
   styleUrls: ['./product-component.component.scss']
 })
 export class ProductComponentComponent {
-  @Input() list: ProductModel[] = [];
+  @Input() list!: ProductModel[];
 
   @Output() addToCart: EventEmitter<ProductModel> = new EventEmitter<ProductModel>();
 

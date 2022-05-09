@@ -41,5 +41,14 @@ export const cartList: CardItemModel[] = [
     category: CATEGORY.PHONE,
     isAvailable: true,
     quantity: 1
+  },
+  {
+    id: 101,
+    name: 'Samsung WM123',
+    description: 'washing machine',
+    price: 1500,
+    category: CATEGORY.WASHING_MACHINE,
+    isAvailable: true,
+    quantity: 1
   }
 ]

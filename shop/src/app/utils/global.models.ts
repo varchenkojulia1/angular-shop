@@ -9,6 +9,6 @@ export interface ProductModel{
   isAvailable: boolean;
 }
 
-export interface CardItemModel extends  ProductModel{
+export interface CardItemModel extends ProductModel{
   quantity: number;
 }
