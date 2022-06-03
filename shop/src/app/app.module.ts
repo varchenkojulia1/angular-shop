@@ -9,10 +9,9 @@ import {ProductsModule} from "./products/products.module";
 import {SharedModule} from "./shared/shared.module";
 import {AppRoutingModule} from "./app-routing.module";
 import {Router} from "@angular/router";
-import {MenuModule} from "./ui/menu/menu.module";
 import {AdminModule} from "./admin/admin.module";
-import {AdminRoutingModule} from "./admin/admin-routing.module";
-
+import {HttpClientModule} from "@angular/common/http";
+import {UiModule} from "./ui/ui.module";
 
 @NgModule({
   declarations: [
@@ -23,12 +22,13 @@ import {AdminRoutingModule} from "./admin/admin-routing.module";
     CartModule,
     OrdersModule,
     ProductsModule,
+    UiModule,
     SharedModule,
     FirstModule,
     BrowserAnimationsModule,
-    MenuModule,
     AdminModule,
     AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
