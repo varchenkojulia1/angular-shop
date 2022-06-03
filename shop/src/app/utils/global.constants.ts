@@ -5,6 +5,11 @@ export enum CATEGORY {
   PHONE, TV, WASHING_MACHINE
 }
 
+export enum AVAILABILITY {
+  IS_AVAILABLE = 'Available',
+  NOT_AVAILABLE = 'Not available'
+}
+
 export const productList: ProductModel[] = [
   {
     id: 123,
@@ -12,7 +17,7 @@ export const productList: ProductModel[] = [
     description: 'phone',
     price: 1000,
     category: CATEGORY.PHONE,
-    isAvailable: true
+    isAvailable: false
   },
   {
     id: 102,

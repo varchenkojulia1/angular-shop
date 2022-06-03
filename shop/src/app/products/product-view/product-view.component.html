@@ -1,0 +1,13 @@
+<div *ngIf="showItem">
+  <button mat-raised-button color="link" (click)="goBack()">Back</button>
+  <h3>{{selectedProduct.name}}</h3>
+  <p>{{selectedProduct.description}}</p>
+  <p [class]="{
+    'available': selectedProduct.isAvailable,
+    'notAvailable': !selectedProduct.isAvailable
+    }">
+    {{availabilityText}}
+  </p>
+  <p>Price: {{selectedProduct.price}}</p>
+  <button mat-raised-button color="primary" (click)="onClick()">Buy</button>
+</div>

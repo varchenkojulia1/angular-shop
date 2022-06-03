@@ -1,10 +1,9 @@
 import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
-import {OrderByPipe} from "./pipe/order-by.pipe";
 import {CommonModule} from "@angular/common";
 import {FormsModule} from "@angular/forms";
-import {HighlightDirective} from "./highlight.directive";
 import {HighlightDirective} from "./directives/highlight.directive";
+import {OrderByPipe} from "../pipe/order-by.pipe";
 
 @NgModule({
   declarations: [HighlightDirective, OrderByPipe],

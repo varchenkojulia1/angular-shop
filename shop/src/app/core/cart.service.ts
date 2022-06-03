@@ -38,6 +38,7 @@ export class CartService {
       return { ...item };
     })
     return this.cartProducts;
+  }
   getCart(): CardItemModel[] {
     return cartList;
   }
