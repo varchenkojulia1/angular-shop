@@ -1,7 +1,0 @@
-  <p appHighlight appBorder class="cart-item">
-    ({{item.id}}) {{item.name}} {{item.price | currency: 'UAH' }}
-    <button (click)="increaseQuantity()"> + </button>
-    {{item.quantity}}
-    <button (click)="decreaseQuantity()"> - </button>
-    <button (click)="deleteItem()">remove</button>
-  </p>
