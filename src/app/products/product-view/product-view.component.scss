@@ -1,0 +1,9 @@
+.available {
+  color: green;
+}
+.notAvailable {
+  color: red;
+}
+.available, .notAvailable {
+  font-weight: 600;
+}

@@ -1,0 +1,5 @@
+<h2>Product list:</h2>
+<app-product-component
+  [list]="productList$ | async"
+  (addToCart)="addToCart($event)"
+></app-product-component>

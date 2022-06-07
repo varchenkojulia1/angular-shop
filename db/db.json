@@ -1,0 +1,23 @@
+{
+  "cart": [
+    {
+    "id": 123,
+    "name": "Iphone 6",
+    "description": "phone",
+    "price": 1000,
+    "category": "phone",
+    "isAvailable": true,
+    "quantity": 1
+  },
+    {
+      "id": 101,
+      "name": "Samsung WM123",
+      "description": "washing machine",
+      "price": 1500,
+      "category": "washing mashin",
+      "isAvailable": true,
+      "quantity": 1
+    }
+  ],
+  "products": []
+}

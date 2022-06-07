@@ -1,0 +1,5 @@
+<p *ngFor=" let product of list">
+  <a [routerLink]='[product.id]'>Name: {{product.name | uppercase }}</a>
+  Description: {{product.description}} Price: {{product.price}} UAH
+  <button (click)="onAddToCart(product)" [disabled]="!product.isAvailable">Buy</button>
+</p>

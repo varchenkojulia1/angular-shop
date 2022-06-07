@@ -1,0 +1,32 @@
+<h2>Cart list:</h2>
+<mat-form-field>
+  <mat-label>Order by:</mat-label>
+  <mat-select
+    [formControl]="optionControl"
+    (selectionChange)="selectionChange($event)"
+  >
+    <mat-option>None</mat-option>
+    <mat-option *ngFor="let option of sortOptions" [value]="option.value">{{option.text}}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<div *ngIf="cardList.length > 0; else emptyCart">
+  <div *ngFor="let item of cardList | orderBy: selected?.key: selected?.isAsc; trackBy: trackByItems">
+    <app-cart-item
+      [item]="item"
+      (onQuantityIncrease)="increaseQuantity($event)"
+      (onDeleteItem)="deleteItem($event)"
+      (onQuantityDecrease)="decreaseQuantity($event)"
+    ></app-cart-item>
+  </div>
+  <p>
+    Total Cost: {{totalCost}}
+  </p>
+  <p>
+    Total Quantity: {{totalQuantity}}
+  </p>
+</div>
+
+<ng-template #emptyCart>
+  <p>Empty card</p>
+</ng-template>
