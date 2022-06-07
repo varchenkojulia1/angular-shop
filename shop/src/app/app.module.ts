@@ -19,6 +19,7 @@ import {UiModule} from "./ui/ui.module";
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     CartModule,
     OrdersModule,
     ProductsModule,
@@ -28,7 +29,7 @@ import {UiModule} from "./ui/ui.module";
     BrowserAnimationsModule,
     AdminModule,
     AppRoutingModule,
-    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

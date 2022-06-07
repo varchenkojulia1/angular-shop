@@ -2,7 +2,7 @@ import {CardItemModel, ProductModel} from "./global.models";
 
 
 export enum CATEGORY {
-  PHONE, TV, WASHING_MACHINE
+  PHONE = 'phone', TV = 'tv', WASHING_MACHINE = 'washing mashin'
 }
 
 export enum AVAILABILITY {
